@@ -1,5 +1,3 @@
-# My-first-respiratiory
-My Resume from complete website devlopment course
 <!DOCTYPE html>
 <html lang="en">
     <head>
