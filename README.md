@@ -1,2 +1,185 @@
 # My-first-respiratiory
 My Resume from complete website devlopment course
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Birthday Celebration</title>
+        <style>
+        /* Modern Canva-style Gradient Background */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            animation: gradientBG 10s ease infinite; /* Slow, shifting animation */
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Floating Decorative Shapes (Canva Aesthetic) */
+        .shape {
+            position: absolute;
+            filter: blur(40px);
+            z-index: 0;
+            animation: float 10s infinite alternate ease-in-out;
+        }
+        .shape-1 { width: 300px; height: 300px; background: #ff9a9e; top: -50px; left: -50px; }
+        .shape-2 { width: 250px; height: 250px; background: #fad0c4; bottom: -50px; right: -50px; animation-delay: -2s; }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(50px, 100px) rotate(20deg); }
+        }
+
+        /* The "Slide" Container */
+        .slide {
+            position: relative;
+            width: 80%;
+            max-width: 1600px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+            z-index: 1;
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideUp 1.2s forwards ease-out;
+        }
+
+        @keyframes slideUp {
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Decorative Elements */
+        .b-day-text {
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+            margin: 0;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            color: #f7d794;
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        /* Animated Button */
+        .btn {
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: #fff;
+            color: #764ba2;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background: #f7d794;
+            color: #2d3436;
+        }
+
+        /* Sparkle Icons */
+        .sparkle {
+            position: absolute;
+            font-size: 65px;
+        }
+        .s1 { top: 20px; right: 30px; animation: blink 1s infinite; }
+        .s2 { bottom: 40px; left: 30px; animation: blink 1.5s infinite; }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(0.8); }
+        }
+        
+        .birthday-card:hover {
+            transform: translateY(-5px); /* Gentle float effect */
+        }
+
+        /* 1. Photo Styling */
+        .birthday-photo {
+            width: 639px;
+            height: 639px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+            border: 8px solid rgb(255, 255, 255);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        /* Decorative Elements: Confetti overlay */
+        .decoration-confetti {
+            font-size: 1.5rem;
+            opacity: 0.6;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            color: #d81b60; /* Warm, festive pink */
+            font-size: 5rem;
+            margin: 0 0 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .wish-message {
+            color: #ffffff;
+            font-style: oblique;
+            font-size: 3rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .signature {
+            font-style: italic;
+            color: #c9f333;
+            font-weight: bold;
+            font-size: 2.8rem;
+        }
+
+        .audio {
+            display:none;
+        }
+        
+       </style>
+    </head>
+    <body> 
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+
+        <div class="slide">
+            <span class="sparkle s1">✨</span>
+            <span class="sparkle s2">✨</span>
+        
+            <img src="C:\Users\dell\Pictures\Screenshots\Screenshot 2026-03-17 142018.png" alt="Beautiful Birthday Moment" class="birthday-photo">
+        
+            <h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Happy Birthday!</h1>
+        
+            <p class="wish-message" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+            Happy Birthday! Wishing you a day as beautiful and amazing as you are. May all your dreams come true. You bring so much joy and light into the world. May this year bring you happiness, success, and all the love you deserve. Hope your day is as lovely as you are!
+            </p>
+        
+            <p class="signature" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"> Prathmesh💕 </p>
+    
+        </div>
+    </body>
+</html>
